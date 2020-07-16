@@ -83,7 +83,7 @@ class Movies extends Component {
     showPagination = () => {
     
       const onePage = this.pageOne().map((page,index)=>{
-        console.log(page)
+   
        return <li onClick={()=>this.goToPage(index)} className="page-item"><a className="page-link" href="#">{index+1}</a></li>
       })
       return onePage
@@ -100,8 +100,7 @@ class Movies extends Component {
      render() { 
         
         
-        console.log(this.state.pageMovies)
-  
+        
         if (this.state.movies.length==0)
         return <p>There are no films in the library'</p>
 
@@ -134,7 +133,7 @@ class Movies extends Component {
             </ul>
             </nav>
 
-            <Pagination  / >
+            <Pagination itemsCount={} / >
             </React.Fragment>
         );
     }
